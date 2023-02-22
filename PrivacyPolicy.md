@@ -1,3 +1,3 @@
 # Privacy Policy
 
-We collected no user data whatsoever.
+We collect no user data whatsoever.
