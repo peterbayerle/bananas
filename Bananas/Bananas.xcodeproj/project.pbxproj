@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A131AD72B04281500F3BD59 /* banana-dict.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1A131AD62B04281500F3BD59 /* banana-dict.sqlite */; };
+		1A86228E29D23CF4000C85EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A86228D29D23CF4000C85EF /* Assets.xcassets */; };
 		1ACE943829A6B88800A82F2F /* BananasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE943729A6B88800A82F2F /* BananasApp.swift */; };
 		1ACE943A29A6B88800A82F2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE943929A6B88800A82F2F /* ContentView.swift */; };
-		1ACE943C29A6B88900A82F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE943B29A6B88900A82F2F /* Assets.xcassets */; };
 		1ACE943F29A6B88900A82F2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE943E29A6B88900A82F2F /* Preview Assets.xcassets */; };
 		1ACE944729A6B8AF00A82F2F /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 1ACE944629A6B8AF00A82F2F /* SQLite */; };
-		1ACE944A29A6B8C800A82F2F /* banana-dict.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE944929A6B8C800A82F2F /* banana-dict.sqlite */; };
 		1ACE944C29A6B8FA00A82F2F /* NaspaDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE944B29A6B8FA00A82F2F /* NaspaDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A131AD62B04281500F3BD59 /* banana-dict.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "banana-dict.sqlite"; sourceTree = "<group>"; };
+		1A86228D29D23CF4000C85EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		1ACE943429A6B88800A82F2F /* Bananas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bananas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACE943729A6B88800A82F2F /* BananasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BananasApp.swift; sourceTree = "<group>"; };
 		1ACE943929A6B88800A82F2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1ACE943B29A6B88900A82F2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ACE943E29A6B88900A82F2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1ACE944929A6B8C800A82F2F /* banana-dict.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "banana-dict.sqlite"; path = "../../../banana-dict.sqlite"; sourceTree = "<group>"; };
 		1ACE944B29A6B8FA00A82F2F /* NaspaDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaspaDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +60,7 @@
 				1ACE944829A6B8B500A82F2F /* Data */,
 				1ACE943729A6B88800A82F2F /* BananasApp.swift */,
 				1ACE943929A6B88800A82F2F /* ContentView.swift */,
-				1ACE943B29A6B88900A82F2F /* Assets.xcassets */,
+				1A86228D29D23CF4000C85EF /* Assets.xcassets */,
 				1ACE943D29A6B88900A82F2F /* Preview Content */,
 				1ACE944B29A6B8FA00A82F2F /* NaspaDictionary.swift */,
 			);
@@ -78,7 +78,7 @@
 		1ACE944829A6B8B500A82F2F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				1ACE944929A6B8C800A82F2F /* banana-dict.sqlite */,
+				1A131AD62B04281500F3BD59 /* banana-dict.sqlite */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -147,9 +147,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ACE944A29A6B8C800A82F2F /* banana-dict.sqlite in Resources */,
+				1A131AD72B04281500F3BD59 /* banana-dict.sqlite in Resources */,
 				1ACE943F29A6B88900A82F2F /* Preview Assets.xcassets in Resources */,
-				1ACE943C29A6B88900A82F2F /* Assets.xcassets in Resources */,
+				1A86228E29D23CF4000C85EF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +202,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -262,6 +263,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -289,21 +291,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"Bananas/Preview Content\"";
 				DEVELOPMENT_TEAM = AWC8S48V23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bayerle.Bananas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -318,21 +321,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"Bananas/Preview Content\"";
 				DEVELOPMENT_TEAM = AWC8S48V23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bayerle.Bananas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

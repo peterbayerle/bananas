@@ -8,43 +8,87 @@
 import Foundation
 import SQLite
 
+struct Definition: Hashable {
+    var text: String
+    var abrevPos: String
+    
+    init(text: String, abrevPos: String) {
+        self.text = !text.isEmpty ? text : "No definition provided"
+        self.abrevPos = abrevPos
+    }
+    
+    var pos: String {
+        switch abrevPos {
+        case "n":
+            return "noun"
+        case "v":
+            return "verb"
+        case "article":
+            return "article"
+        case "conj":
+            return "conjunction"
+        case "adv":
+            return "adverb"
+        case "adj":
+            return "adjective"
+        case "interj":
+            return "interjection"
+        case "pron":
+            return "pronoun"
+        case "prep":
+            return "preposition"
+        default:
+            return abrevPos
+        }
+    }
+}
+
 struct Word: Hashable {
-    var word: String
-    var definition: String
-    var pos: String
+    var name: String
+    var unparsedDefinitions: String
+    var inNwl20: Bool
+    var inNwl23: Bool
+    
+    var definitions: [Definition] {
+        unparsedDefinitions.components(separatedBy: ";").map {
+            let args = $0.components(separatedBy: ":")
+            return Definition(text: args[0], abrevPos: args[1])
+        }
+    }
+    
+    static func stub(name: String) -> Word {
+        return Word(name: name, unparsedDefinitions: "", inNwl20: false, inNwl23: false)
+    }
 }
 
 class NaspaDictionary {
     var db: Connection
+    
+    let words = Table("words")
+    let nameCol = Expression<String>("word")
+    let defCol = Expression<String>("definitions")
+    let inNwl20Col = Expression<Bool>("in_nwl_20")
+    let inNwl23Col = Expression<Bool>("in_nwl_23")
     
     init() {
         let path = Bundle.main.path(forResource: "banana-dict", ofType: "sqlite")!
         self.db = try! Connection(path, readonly: true)
     }
     
-    func check(_ name: String) -> Bool {
-        let words = Table("words")
-        let nameCol = Expression<String>("word_friendly")
-
-        let count = try! db.scalar(words.filter(nameCol == name).count)
-        
-        return count > 0
+    func searchWord(_ name: String) -> Word {
+        if let word = try? db.pluck(words.filter(nameCol == name)) {
+            return Word(name: word[nameCol], unparsedDefinitions: word[defCol], inNwl20: word[inNwl20Col], inNwl23: word[inNwl23Col])
+        } else {
+            return Word.stub(name: name)
+        }
     }
     
-    
-    
-    func fetchDefinitions(_ name: String) -> [Word] {
-        let words = Table("words")
-        let nameCol = Expression<String>("word_friendly")
-        let defCol = Expression<String>("definition_friendly")
-        let posCol = Expression<String>("pos_friendly")
-        
+    func randomTwoLetterWord() -> Word {
         var result: [Word] = []
-        for word in try! db.prepare(words.filter(nameCol == name)) {
-            result.append(Word(word: word[nameCol], definition: word[defCol], pos: word[posCol]))
+        for word in try! db.prepare(words.filter(nameCol.length == 2)) {
+            result.append(Word(name: word[nameCol], unparsedDefinitions: word[defCol], inNwl20: word[inNwl20Col], inNwl23: word[inNwl23Col]))
         }
         
-        return result
+        return result.randomElement()!
     }
-    
 }

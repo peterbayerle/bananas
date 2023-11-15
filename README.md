@@ -4,11 +4,11 @@
 
 | Word Search | Retrieve Definitions |
 | ----------- | ----------- |
-|<img src="./static/knowing.png">| <img src="./static/knowing-def.png"> |
+|<img src="./static/rando.png">| <img src="./static/zoodle.png"> |
 
 ## Running the app
-1. Download JSON word list from NASPA site, and put in `scripts/data`. Then, run 
+1. Download Zyzzyva definition text files from NASPA site, and put in `scripts/data` as `nwl_20.txt` and `nwl_23.txt` Then, run 
 ```bash
-bash scripts/build_db.sh
+python3 ./scripts/preprocess_naspa_dicts.py
 ```
-2. Insert resulting `.sqlite` file into `Bananas/Bananas/Data`
+2. Move the resulting `.sqlite` file into `/Bananas/Bananas/Data`
